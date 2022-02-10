@@ -318,15 +318,16 @@ async def shikhar(_, CallbackQuery):
 async def help_button(client, query):
     home_match = re.match(r"help_home\((.+?)\)", query.data)
     mod_match = re.match(r"help_module\((.+?)\)", query.data)
-    prev_match = re.match(r"help_1\((.+?)\)", query.data)
-    next_match = re.match(r"help_2\((.+?)\)", query.data)
+    prev_match = re.match(r"help_prev\((.+?)\)", query.data)
+    next_match = re.match(r"help_next\((.+?)\)", query.data)
     back_match = re.match(r"help_devu", query.data)
     create_match = re.match(r"help_create", query.data)
     top_text = f"""Hello {query.from_user.first_name},
+ᴘɪʀᴏ,
 
-Click on the buttons for more information.
+ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ꜰᴏʀ ᴍᴏʀᴇ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ.🇮🇳
 
-All commands can be used with: /
+ᴅᴏ /help ғᴏʀ ᴍᴏʀᴇ ʜᴇʟᴘ ᴏʀ ᴜ ᴄᴀɴ ᴅᴏ /music :!
  """
     if mod_match:
         module = mod_match.group(1)
