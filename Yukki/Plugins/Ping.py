@@ -1,4 +1,4 @@
-import os
+'''import os
 import time
 from datetime import datetime
 
@@ -42,3 +42,4 @@ async def ping(_, message):
     await response.edit_text(
         f"**𝗣𝗢𝗡𝗚!!**\n`⚡{resp} ms`\n\n<b><u>{MUSIC_BOT_NAME} 𝗠𝗢𝗜 𝗦𝗧𝗔𝗧𝗘𝗦🔁:</u></b>{uptime}"
     )
+'''
