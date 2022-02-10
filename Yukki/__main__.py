@@ -202,13 +202,13 @@ I'm Telegram Voice Chat Audio with some useful features.
 All commands can be used with: / """
 
 
-@app.on_message(filters.command("help") & filters.private)
+@app.on_message(filters.command("music") & filters.private)
 async def help_command(_, message):
     text, keyboard = await help_parser(message.from_user.mention)
     await app.send_message(message.chat.id, text, reply_markup=keyboard)
 
 
-@app.on_message(filters.command("start") & filters.private)
+@app.on_message(filters.command("tr3tgvde14799jbvfrty5r4fvfrt88gr56885rxe345") & filters.private)
 async def start_command(_, message):
     if len(message.text.split()) > 1:
         name = (message.text.split(None, 1)[1]).lower()
@@ -296,11 +296,11 @@ async def help_parser(name, keyboard=None):
     if not keyboard:
         keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
-        """Hello {first_name},
+        """ʜᴇʟʟᴏ {first_name} ᴘɪʀᴏ,
 
-Click on the buttons for more information.
+ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ꜰᴏʀ ᴍᴏʀᴇ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ.🇮🇳
 
-All commands can be used with: /
+ᴅᴏ /help ғᴏʀ ᴍᴏʀᴇ ʜᴇʟᴘ ᴏʀ ᴜ ᴄᴀɴ ᴅᴏ /music :!
 """.format(
             first_name=name
         ),
@@ -340,10 +340,10 @@ All commands can be used with: /
             [
                 [
                     InlineKeyboardButton(
-                        text="↪️ Back", callback_data="help_back"
+                        text="↪️ ɢᴏ ʙᴀᴄᴋ", callback_data="help_back"
                     ),
                     InlineKeyboardButton(
-                        text="🔄 Close", callback_data="close"
+                        text="🔄 ᴄʟᴏsᴇ", callback_data="close"
                     ),
                 ],
             ]
