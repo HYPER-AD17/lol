@@ -1,4 +1,4 @@
-import asyncio
+'''import asyncio
 import random
 import time
 from sys import version as pyver
@@ -504,3 +504,4 @@ async def start_markup_check(_, CallbackQuery):
         await CallbackQuery.answer(
             f"Yukki Disk Usage: {diske}%", show_alert=True
         )
+'''
