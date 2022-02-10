@@ -12,7 +12,7 @@ from Yukki.Utilities.ping import get_readable_time
 __MODULE__ = "Ping"
 __HELP__ = """
 
-/mping - Check if Bot is alive or not.
+/ping - Check if Bot is alive or not.
 """
 
 
