@@ -29,16 +29,16 @@ Disk: {disk}%"""
     return stats
 
 
-@app.on_message(filters.command(["mping", f"ping@{BOT_USERNAME}"]))
+@app.on_message(filters.command(["ping", f"ping@{BOT_USERNAME}"]))
 async def ping(_, message):
     start = datetime.now()
     response = await message.reply_photo(
-        photo="Utils/Query.jpg",
-        caption=">> Pong!",
+        photo="https://telegra.ph/file/3b583788e713096b24e2e.png",
+        caption=">> 𝗣𝗢𝗡𝗚!",
     )
     uptime = await bot_sys_stats()
     end = datetime.now()
     resp = (end - start).microseconds / 1000
     await response.edit_text(
-        f"**Pong!**\n`⚡{resp} ms`\n\n<b><u>{MUSIC_BOT_NAME} System Stats:</u></b>{uptime}"
+        f"**𝗣𝗢𝗡𝗚!!**\n`⚡{resp} ms`\n\n<b><u>{MUSIC_BOT_NAME} 𝗠𝗢𝗜 𝗦𝗧𝗔𝗧𝗘𝗦🔁:</u></b>{uptime}"
     )
