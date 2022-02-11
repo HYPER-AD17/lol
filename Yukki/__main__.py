@@ -202,7 +202,7 @@ I'm Telegram Voice Chat Audio with some useful features.
 All commands can be used with: / """
 
 
-@app.on_message(filters.command("music") & filters.private)
+@app.on_message(filters.command("himgirishsjstaqiqywgsvshzcfaja") & filters.private)
 async def help_command(_, message):
     text, keyboard = await help_parser(message.from_user.mention)
     await app.send_message(message.chat.id, text, reply_markup=keyboard)
