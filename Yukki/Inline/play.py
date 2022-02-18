@@ -8,18 +8,18 @@ def url_markup(videoid, duration, user_id, query, query_type):
     buttons = [
         [
             InlineKeyboardButton(
+                text="𝄞𝗣𝗟𝗔𝗬𝄞",
+                callback_data=f"Yukki {videoid}|{duration}|{user_id}",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
                 text="◁",
                 callback_data=f"slider B|{query_type}|{query}|{user_id}",
             ),
             InlineKeyboardButton(
                 text="▷",
                 callback_data=f"slider F|{query_type}|{query}|{user_id}",
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="𝄞𝗣𝗟𝗔𝗬𝄞",
-                callback_data=f"Yukki {videoid}|{duration}|{user_id}",
             ),
         ],
         [
