@@ -130,7 +130,7 @@ async def userdel(_, message: Message):
 @app.on_message(filters.command("sudolist"))
 async def sudoers_list(_, message: Message):
     sudoers = await get_sudoers()
-    text = "⭐️<u> **Owners:**</u>\n"
+    text = "✨<u> **ᴏᴍғᴏ ᴏᴡɴᴇʀ:**</u>\n"
     sex = 0
     for x in OWNER_ID:
         try:
@@ -139,7 +139,7 @@ async def sudoers_list(_, message: Message):
             sex += 1
         except Exception:
             continue
-        text += f"{sex}➤ {user}\n"
+        text += f"{sex}☆「 {user} 」\n"
     smex = 0
     for count, user_id in enumerate(sudoers, 1):
         if user_id not in OWNER_ID:
@@ -148,9 +148,9 @@ async def sudoers_list(_, message: Message):
                 user = user.first_name if not user.mention else user.mention
                 if smex == 0:
                     smex += 1
-                    text += "\n⭐️<u> **Sudo Users:**</u>\n"
+                    text += "\n❄<u> **sᴜᴅᴏ ᴜsᴇʀs:**</u>\n"
                 sex += 1
-                text += f"{sex}➤ {user}\n"
+                text += f"{sex}☆ 「 {user} 」\n"
             except Exception:
                 continue
     if not text:
