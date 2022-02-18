@@ -1,4 +1,4 @@
-import os
+"""import os
 
 import speedtest
 import wget
@@ -63,3 +63,4 @@ async def statsguwid(_, message):
     )
     os.remove(path)
     await m.delete()
+"""
