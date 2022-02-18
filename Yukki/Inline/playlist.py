@@ -10,7 +10,8 @@ def check_markup(user_name, user_id, videoid):
                 url="https://telegra.ph/%E1%B4%85%E1%B4%87%E1%B4%A0%E1%B4%9CMusic-02-11",
             ),
         ],
-        [InlineKeyboardButton(text="🗑 𝗖𝗹𝗼𝘀𝗲", callback_data="close")],
+        [
+            InlineKeyboardButton(text="🗑 𝗖𝗹𝗼𝘀𝗲", callback_data="close")],
     ]
     return buttons
 
@@ -22,7 +23,8 @@ def playlist_markup(user_name, user_id, videoid):
                 callback_data=f"show_genre {user_id}|Personal|{videoid}",
             ),
         ],
-        [InlineKeyboardButton(text="🗑 𝗖𝗹𝗼𝘀𝗲", callback_data="close")],
+        [
+            InlineKeyboardButton(text="🗑 𝗖𝗹𝗼𝘀𝗲", callback_data="close")],
     ]
     return buttons
 
