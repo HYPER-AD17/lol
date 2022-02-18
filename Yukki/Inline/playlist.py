@@ -11,20 +11,22 @@ def check_markup(user_name, user_id, videoid):
             ),
         ],
         [
-            InlineKeyboardButton(text="🗑 𝗖𝗹𝗼𝘀𝗲", callback_data="close")],
+            InlineKeyboardButton(text="🗑 𝗖𝗹𝗼𝘀𝗲", callback_data="close")
+        ],
     ]
     return buttons
 
 
 def playlist_markup(user_name, user_id, videoid):
     buttons = [
-            InlineKeyboardButton(
+        [   InlineKeyboardButton(
                 text="𝗬𝗼𝘂𝗿 𝗣𝗹𝗮𝘆𝗟𝗶𝘀𝘁",
                 callback_data=f"show_genre {user_id}|Personal|{videoid}",
             ),
         ],
         [
-            InlineKeyboardButton(text="🗑 𝗖𝗹𝗼𝘀𝗲", callback_data="close")],
+            InlineKeyboardButton(text="🗑 𝗖𝗹𝗼𝘀𝗲", callback_data="close")
+        ],
     ]
     return buttons
 
