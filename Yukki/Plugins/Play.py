@@ -49,7 +49,7 @@ async def play(_, message: Message):
     url = get_url(message)
     if audio:
         mystic = await message.reply_text(
-            "🔄 Processing Audio... Please Wait!"
+            "🔄 𝗣𝗿𝗼𝗰𝗲𝘀𝘀𝗶𝗻𝗴.....𝗪𝗮𝗶𝘁 𝗕𝘂𝗱𝗱𝗶😇"
         )
 
         if audio.file_size > 157286400:
@@ -87,7 +87,7 @@ async def play(_, message: Message):
             mystic,
         )
     elif url:
-        mystic = await message.reply_text("🔄 Processing URL... Please Wait!")
+        mystic = await message.reply_text("🔄 𝗣𝗿𝗼𝗰𝗲𝘀𝘀𝗶𝗻𝗴 𝗬𝗼𝘂𝗿 𝗦𝗼𝗻𝗴....𝗪𝗮𝗶𝘁!!")
         query = message.text.split(None, 1)[1]
         (
             title,
@@ -100,7 +100,7 @@ async def play(_, message: Message):
         buttons = url_markup2(videoid, duration_min, message.from_user.id)
         return await message.reply_photo(
             photo=thumb,
-            caption=f"📎Title: **{title}\n\n⏳Duration:** {duration_min} Mins\n\n__[Get Additional Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__",
+            caption=f"📎𝗧𝗶𝘁𝗹𝗲: **{title}\n\n⏳𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:** {duration_min} Mins\n\n__",
             reply_markup=InlineKeyboardMarkup(buttons),
         )
     else:
@@ -116,7 +116,7 @@ async def play(_, message: Message):
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
             return
-        mystic = await message.reply_text("🔍 **Searching**...")
+        mystic = await message.reply_text("🔍 **𝗛𝗺𝗺!! 𝗦𝗲𝗮𝗿𝗰𝗵𝗶𝗻𝗴**...")
         query = message.text.split(None, 1)[1]
         (
             title,
@@ -131,7 +131,7 @@ async def play(_, message: Message):
         )
         return await message.reply_photo(
             photo=thumb,
-            caption=f"📎Title: **{title}\n\n⏳Duration:** {duration_min} Mins\n\n__[Get Additional Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__",
+            caption=f"📎𝗧𝗶𝘁𝗹𝗲: **{title}\n\n⏳𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:** {duration_min} Mins\n\n__",
             reply_markup=InlineKeyboardMarkup(buttons),
         )
 
@@ -161,7 +161,7 @@ async def startyuplay(_, CallbackQuery):
         )
     await CallbackQuery.answer(f"Processing:- {title[:20]}", show_alert=True)
     mystic = await CallbackQuery.message.reply_text(
-        f"**{MUSIC_BOT_NAME} Downloader**\n\n**Title:** {title[:50]}\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%"
+        f"**{MUSIC_BOT_NAME} ᴅᴏᴡɴʟᴏᴀᴅᴇʀ**\n\n**ᴛɪᴛʟᴇ:** {title[:50]}\n\n0% ____________ 100%"
     )
     downloaded_file = await loop.run_in_executor(
         None, download, videoid, mystic, title
@@ -306,7 +306,7 @@ async def slider_query_results(_, CallbackQuery):
         )
         med = InputMediaPhoto(
             media=thumb,
-            caption=f"📎Title: **{title}\n\n⏳Duration:** {duration_min} Mins\n\n__[Get Additional Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__",
+            caption=f"📎𝗧𝗶𝘁𝗹𝗲: **{title}\n\n⏳𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:** {duration_min} Mins\n\n__",
         )
         return await CallbackQuery.edit_message_media(
             media=med, reply_markup=InlineKeyboardMarkup(buttons)
@@ -329,7 +329,7 @@ async def slider_query_results(_, CallbackQuery):
         )
         med = InputMediaPhoto(
             media=thumb,
-            caption=f"📎Title: **{title}\n\n⏳Duration:** {duration_min} Mins\n\n__[Get Additional Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__",
+            caption=f"📎𝗧𝗶𝘁𝗹𝗲: **{title}\n\n⏳𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:** {duration_min} Mins\n\n__",
         )
         return await CallbackQuery.edit_message_media(
             media=med, reply_markup=InlineKeyboardMarkup(buttons)
