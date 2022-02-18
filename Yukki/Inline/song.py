@@ -6,7 +6,7 @@ def song_markup(videoid, duration, user_id, query, query_type):
     buttons = [
         [
             InlineKeyboardButton(
-                text="❮𝗣𝗥𝗘𝗩",
+                text="◁",
                 callback_data=f"song_right B|{query_type}|{query}|{user_id}",
             ),
             InlineKeyboardButton(
@@ -14,13 +14,13 @@ def song_markup(videoid, duration, user_id, query, query_type):
                 callback_data=f"qwertyuiopasdfghjkl {videoid}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="𝗡𝗘𝗫𝗧❯",
+                text="▷",
                 callback_data=f"song_right F|{query_type}|{query}|{user_id}",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="🗑 𝗖𝗟𝗢𝗦𝗘𝄡",
+                text="🗑𝗖𝗟𝗢𝗦𝗘𝄢",
                 callback_data=f"forceclose {query}|{user_id}",
             )
         ],
