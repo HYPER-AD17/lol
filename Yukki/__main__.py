@@ -269,10 +269,10 @@ async def start_command(_, message):
                 [
                     [
                         InlineKeyboardButton(
-                            text="🎥 Watch Youtube Video", url=f"{link}"
+                            text="🎥 𝗪𝗮𝘁𝗰𝗵 𝗢𝗻 𝗬𝗼𝘂𝘁𝘂𝗯𝗲", url=f"{link}"
                         ),
                         InlineKeyboardButton(
-                            text="🔄 Close", callback_data="close"
+                            text="🔄𝗖𝗹𝗼𝘀𝗲", callback_data="close"
                         ),
                     ],
                 ]
