@@ -6,12 +6,8 @@ def check_markup(user_name, user_id, videoid):
     buttons = [
         [
             InlineKeyboardButton(
-                text=f"𝗚𝗿𝗼𝘂𝗽'𝘀",
-                callback_data=f"playlist_check {user_id}|Group|{videoid}",
-            ),
-            InlineKeyboardButton(
-                text=f"{user_name[:8]}'s Playlist",
-                callback_data=f"playlist_check {user_id}|Personal|{videoid}",
+                text=f"✨ᴄᴏᴍᴍᴀɴᴅs⚡",
+                url="https://telegra.ph/%E1%B4%85%E1%B4%87%E1%B4%A0%E1%B4%9CMusic-02-11",
             ),
         ],
         [InlineKeyboardButton(text="🗑 𝗖𝗹𝗼𝘀𝗲", callback_data="close")],
@@ -21,13 +17,8 @@ def check_markup(user_name, user_id, videoid):
 
 def playlist_markup(user_name, user_id, videoid):
     buttons = [
-        [
             InlineKeyboardButton(
-                text=f"𝗚𝗿𝗼𝘂𝗽'𝘀",
-                callback_data=f"show_genre {user_id}|Group|{videoid}",
-            ),
-            InlineKeyboardButton(
-                text=f"{user_name[:8]}'s Playlist",
+                text="𝗬𝗼𝘂𝗿 𝗣𝗹𝗮𝘆𝗟𝗶𝘀𝘁",
                 callback_data=f"show_genre {user_id}|Personal|{videoid}",
             ),
         ],
