@@ -161,8 +161,10 @@ def secondary_markup(videoid, user_id):
     buttons = [
         [
             InlineKeyboardButton(text="◁", callback_data=f"resumecb"),
-            InlineKeyboardButton(text="❚❚", callback_data=f"pausecb"),
             InlineKeyboardButton(text="❚▷", callback_data=f"skipcb"),
+        ],
+        [
+            InlineKeyboardButton(text="❚❚", callback_data=f"pausecb"),
             InlineKeyboardButton(text="☋", callback_data=f"stopcb"),
         ],
         [
