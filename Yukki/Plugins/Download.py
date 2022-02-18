@@ -65,11 +65,11 @@ async def ytdata(_, CallbackQuery):
 
 
 inl = InlineKeyboardMarkup(
-    [[InlineKeyboardButton(text="Downloading......", callback_data=f"down")]]
+    [[InlineKeyboardButton(text="𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗶𝗻𝗴...𝘄𝗮𝗶𝘁!!🤔", callback_data=f"down")]]
 )
 
 upl = InlineKeyboardMarkup(
-    [[InlineKeyboardButton(text="Uploading......", callback_data=f"down")]]
+    [[InlineKeyboardButton(text="𝗨𝗽𝗹𝗼𝗮𝗱𝗶𝗻𝗴...𝘄𝗮𝗶𝘁!!🔸", callback_data=f"down")]]
 )
 
 
@@ -77,15 +77,15 @@ def inl_mark(videoid, user_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="Download or Upload Failed......", callback_data=f"down"
+                text="𝗣𝗿𝗼𝗰𝗲𝘀𝘀𝗶𝗻𝗴 𝗙𝗮𝗶𝗹...!!🤐", callback_data=f"down"
             )
         ],
         [
             InlineKeyboardButton(
-                text="⬅️  Go Back", callback_data=f"good {videoid}|{user_id}"
+                text="⬅️𝗕𝗮𝗰𝗸𝄢", callback_data=f"good {videoid}|{user_id}"
             ),
             InlineKeyboardButton(
-                text="🗑 Close Menu", callback_data=f"close2"
+                text="🗑𝗖𝗹𝗼𝘀𝗲☢", callback_data=f"close2"
             ),
         ],
     ]
@@ -230,7 +230,7 @@ async def boom(_, CallbackQuery):
 
 def p_mark(link, channel):
     buttons = [
-        [InlineKeyboardButton(text="Watch on Youtube", url=f"{link}")],
+        [InlineKeyboardButton(text="𝗪𝗮𝘁𝗰𝗵 𝗢𝗻 𝗬𝗼𝘂𝘁𝘂𝗯𝗲", url=f"{link}")],
     ]
     return buttons
 
