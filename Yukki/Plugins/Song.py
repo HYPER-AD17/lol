@@ -40,7 +40,7 @@ async def play(_, message: Message):
     await message.delete()
     url = get_url(message)
     if url:
-        mystic = await message.reply_text("🔄 Processing URL... Please Wait!")
+        mystic = await message.reply_text("🔄𝗣𝗿𝗼𝗰𝗲𝘀𝘀𝗶𝗻𝗴 𝗩𝗮𝗶 𝗪𝗮𝗶𝘁!!")
         query = message.text.split(None, 1)[1]
         (
             title,
@@ -55,7 +55,7 @@ async def play(_, message: Message):
         buttons = song_download_markup(videoid, message.from_user.id)
         return await message.reply_photo(
             photo=thumb,
-            caption=f"📎Title: **{title}\n\n⏳Duration:** {duration_min} Mins\n\n__[Get Additional Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__",
+            caption=f"📎𝗧𝗶𝘁𝗹𝗲: **{title}\n\n⏳𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:** {duration_min} Mins\n\n__",
             reply_markup=InlineKeyboardMarkup(buttons),
         )
     else:
@@ -64,7 +64,7 @@ async def play(_, message: Message):
                 "**Usage:**\n\n/song [Youtube Url or Music Name]\n\nDownloads the Particular Query."
             )
             return
-        mystic = await message.reply_text("🔍 Searching Your Query...")
+        mystic = await message.reply_text("🔍 𝗙𝗶𝗻𝗱𝗶𝗻𝗴 𝗤𝘂𝗲𝗿𝘆....")
         query = message.text.split(None, 1)[1]
         (
             title,
@@ -81,7 +81,7 @@ async def play(_, message: Message):
         )
         return await message.reply_photo(
             photo=thumb,
-            caption=f"📎Title: **{title}\n\n⏳Duration:** {duration_min} Mins\n\n__[Get Additional Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__",
+            caption=f"📎𝗧𝗶𝘁𝗹𝗲: **{title}\n\n⏳𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:** {duration_min} Mins\n\n__",
             reply_markup=InlineKeyboardMarkup(buttons),
         )
 
@@ -132,7 +132,7 @@ async def song_right(_, CallbackQuery):
         )
         med = InputMediaPhoto(
             media=thumb,
-            caption=f"📎Title: **{title}\n\n⏳Duration:** {duration_min} Mins\n\n__[Get Additional Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__",
+            caption=f"📎𝗧𝗶𝘁𝗹𝗲: **{title}\n\n⏳𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:** {duration_min} Mins\n\n__",
         )
         return await CallbackQuery.edit_message_media(
             media=med, reply_markup=InlineKeyboardMarkup(buttons)
@@ -157,7 +157,7 @@ async def song_right(_, CallbackQuery):
         )
         med = InputMediaPhoto(
             media=thumb,
-            caption=f"📎Title: **{title}\n\n⏳Duration:** {duration_min} Mins\n\n__[Get Additional Information About Video](https://t.me/{BOT_USERNAME}?start=info_{videoid})__",
+            caption=f"📎𝗧𝗶𝘁𝗹𝗲: **{title}\n\n⏳𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:** {duration_min} Mins\n\n__",
         )
         return await CallbackQuery.edit_message_media(
             media=med, reply_markup=InlineKeyboardMarkup(buttons)
