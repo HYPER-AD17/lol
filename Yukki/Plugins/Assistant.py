@@ -1,4 +1,4 @@
-from inspect import getfullargspec
+'''from inspect import getfullargspec
 
 from pyrogram import filters
 from pyrogram.raw.functions.messages import DeleteHistory
@@ -349,3 +349,4 @@ async def eor(msg: Message, **kwargs):
     )
     spec = getfullargspec(func.__wrapped__).args
     return await func(**{k: v for k, v in kwargs.items() if k in spec})
+'''
