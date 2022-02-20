@@ -1,4 +1,4 @@
-import asyncio
+'''import asyncio
 import json
 import logging
 import platform
@@ -313,3 +313,4 @@ async def stats_markup(_, CallbackQuery):
         await CallbackQuery.edit_message_text(smex, reply_markup=stats1)
     if command == "wait_stats":
         await CallbackQuery.answer()
+'''
