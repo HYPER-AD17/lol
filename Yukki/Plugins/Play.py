@@ -35,12 +35,12 @@ loop = asyncio.get_event_loop()
 @AssistantAdd
 async def play(_, message: Message):
     await message.delete()
-    ​    ​replied​ ​=​ ​m​.​reply_to_message 
- ​    ​chat_id​ ​=​ ​m​.​chat​.​id 
- ​    ​keyboard​ ​=​ ​InlineKeyboardMarkup​( 
- ​                  [[ 
- ​                      ​InlineKeyboardButton​(​"⏹"​, ​callback_data​=​"cbstop"​), 
- ​                      ​InlineKeyboardButton​(​"⏸"​, ​callback_data​=​"cbpause"​), 
+    ​​replied​ ​=​ ​m​.​reply_to_message 
+ ​   ​chat_id​ ​=​ ​m​.​chat​.​id 
+ ​   keyboard​ ​=​ ​InlineKeyboardMarkup​( 
+ ​                  [[ 
+ ​                      InlineKeyboardButton​(​"⏹"​, ​callback_data​=​"cbstop"​), 
+ ​                      InlineKeyboardButton​(​"⏸"​, ​callback_data​=​"cbpause"​), 
  ​                      ​InlineKeyboardButton​(​"⏭️"​, ​"skip"​), 
  ​                      ​InlineKeyboardButton​(​"▶️"​, ​callback_data​=​"cbresume"​), 
  ​                  ],[ 
