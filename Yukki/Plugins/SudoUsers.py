@@ -47,6 +47,9 @@ Only for Sudo Users.
 """
 # Add Sudo Users!
 
+ZEXXY_SUDO = "https://telegra.ph/file/68af66d00f96a1ee520bd.mp4"
+WRONG_PORT = "https://telegra.ph/file/d981099bc0833151363e2.png"
+ZEXX = "https://telegra.ph/file/cb3d266e9e94f587c9c13.png"
 
 @app.on_message(filters.command("addsudo") & filters.user(OWNER_ID))
 async def useradd(_, message: Message):
@@ -61,26 +64,26 @@ async def useradd(_, message: Message):
             user = user.replace("@", "")
         user = await app.get_users(user)
         if user.id in SUDOERS:
-            return await message.reply_text(
-                f"{user.mention} is already a sudo user."
+            return await message.reply_photo(WRONG_PORT, 
+                caption= f"{user.mention} is already a sudo user."
             )
         added = await add_sudo(user.id)
         if added:
-            await message.reply_text(
-                f"Added **{user.mention}** to Sudo Users."
+            await message.reply_video(ZEXXY_SUDO, 
+                caption= f"Added **{user.mention}** to Sudo Users."
             )
             os.system(f"kill -9 {os.getpid()} && python3 -m Yukki")
         else:
             await message.reply_text("Failed")
         return
     if message.reply_to_message.from_user.id in SUDOERS:
-        return await message.reply_text(
-            f"{message.reply_to_message.from_user.mention} is already a sudo user."
+        return await message.reply_photo(WRONG_PORT, 
+            caption= f"{message.reply_to_message.from_user.mention} is already a sudo user."
         )
     added = await add_sudo(message.reply_to_message.from_user.id)
     if added:
-        await message.reply_text(
-            f"Added **{message.reply_to_message.from_user.mention}** to Sudo Users"
+        await message.reply_video(ZEXXY_SUDO, 
+            caption= f"Added **{message.reply_to_message.from_user.mention}** to Sudo Users"
         )
         os.system(f"kill -9 {os.getpid()} && python3 -m Yukki")
     else:
@@ -105,8 +108,8 @@ async def userdel(_, message: Message):
             return await message.reply_text(f"Not a part of Bot's Sudo.")
         removed = await remove_sudo(user.id)
         if removed:
-            await message.reply_text(
-                f"Removed **{user.mention}** from {MUSIC_BOT_NAME}'s Sudo."
+            await message.reply_photo(ZEXX,
+                caption= f"Removed **{user.mention}** from {MUSIC_BOT_NAME}'s Sudo."
             )
             return os.system(f"kill -9 {os.getpid()} && python3 -m Yukki")
         await message.reply_text(f"Something wrong happened.")
@@ -115,19 +118,21 @@ async def userdel(_, message: Message):
     user_id = message.reply_to_message.from_user.id
     mention = message.reply_to_message.from_user.mention
     if user_id not in SUDOERS:
-        return await message.reply_text(
-            f"Not a part of {MUSIC_BOT_NAME}'s Sudo."
+        return await message.reply_photo(WRONG_PORT,
+            caption= f"Not a part of {MUSIC_BOT_NAME}'s Sudo."
         )
     removed = await remove_sudo(user_id)
     if removed:
-        await message.reply_text(
-            f"Removed **{mention}** from {MUSIC_BOT_NAME}'s Sudo."
+        await message.reply_photo(ZEXX,
+            caption= f"Removed **{mention}** from {MUSIC_BOT_NAME}'s Sudo."
         )
         return os.system(f"kill -9 {os.getpid()} && python3 -m Yukki")
     await message.reply_text(f"Something wrong happened.")
 
+OMFO_KIDZZ = "https://telegra.ph/file/bfba10cd99fe4aa5d8d76.mp4"
+OMFO_KIDZ = "https://telegra.ph/file/cd02fbe0811281853fa8b.mp4"
 
-@app.on_message(filters.command("sudolist"))
+@app.on_message(filters.command("sudo"))
 async def sudoers_list(_, message: Message):
     sudoers = await get_sudoers()
     text = "✨<u> **ᴏᴍғᴏ ᴏᴡɴᴇʀ:**</u>\n"
@@ -154,13 +159,14 @@ async def sudoers_list(_, message: Message):
             except Exception:
                 continue
     if not text:
-        await message.reply_text("No Sudo Users")
+        await message.reply_video(OMFO_KIDZ, caption= "sᴜᴅᴏ ʟɪsᴛ ᴋʜᴀʟɪ ʜᴀɪ ᴠᴀɪ🙄🙄",)
     else:
-        await message.reply_text(text)
+        await message.reply_video(OMFO_KIDZZ, caption=text,)
 
 
 # Restart Yukki
 
+KIDDZ_AWAY = "https://telegra.ph/file/5d61908aa2af7a90a834e.mp4"
 
 @app.on_message(filters.command("restart") & filters.user(SUDOERS))
 async def theme_func(_, message):
@@ -190,7 +196,7 @@ async def theme_func(_, message):
             await remove_active_chat(x)
         except Exception:
             pass
-    x = await message.reply_text(f"Restarting {MUSIC_BOT_NAME}")
+    x = await message.reply_video(KIDDZ_AWAY, caption= f"Restarting {MUSIC_BOT_NAME}")
     os.system(f"kill -9 {os.getpid()} && python3 -m Yukki")
 
 
@@ -220,7 +226,7 @@ async def maintenance(_, message):
 ## Gban Module
 
 
-@app.on_message(filters.command("gban") & filters.user(SUDOERS))
+@app.on_message(filters.command("!!!!!!fkdcnogbanherefkofffff") & filters.user(SUDOERS))
 async def ban_globally(_, message):
     if not message.reply_to_message:
         if len(message.command) < 2:
@@ -328,7 +334,7 @@ __**New Global Ban on {MUSIC_BOT_NAME}**__
             return
 
 
-@app.on_message(filters.command("ungban") & filters.user(SUDOERS))
+@app.on_message(filters.command("!!!!!fkoffnogabanmwansnounban") & filters.user(SUDOERS))
 async def unban_globally(_, message):
     if not message.reply_to_message:
         if len(message.command) != 2:
