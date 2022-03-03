@@ -111,7 +111,7 @@ async def initiate_bot():
         console.print(f"\n[red]Stopping Bot")
         return
     try:
-        await ASS_CLI_1.join_chat("OfficialYukki")
+        await ASS_CLI_1.join_chat("SILENT_BOTS")
     except:
         pass
     try:
@@ -126,7 +126,7 @@ async def initiate_bot():
         console.print(f"\n[red]Stopping Bot")
         return
     try:
-        await ASS_CLI_2.join_chat("OfficialYukki")
+        await ASS_CLI_2.join_chat("SILENT_BOTS")
     except:
         pass
     try:
@@ -141,7 +141,7 @@ async def initiate_bot():
         console.print(f"\n[red]Stopping Bot")
         return
     try:
-        await ASS_CLI_3.join_chat("OfficialYukki")
+        await ASS_CLI_3.join_chat("SILENT_BOTS")
     except:
         pass
     try:
@@ -156,7 +156,7 @@ async def initiate_bot():
         console.print(f"\n[red]Stopping Bot")
         return
     try:
-        await ASS_CLI_4.join_chat("OfficialYukki")
+        await ASS_CLI_4.join_chat("SILENT_BOTS")
     except:
         pass
     try:
@@ -171,7 +171,7 @@ async def initiate_bot():
         console.print(f"\n[red]Stopping Bot")
         return
     try:
-        await ASS_CLI_5.join_chat("OfficialYukki")
+        await ASS_CLI_5.join_chat("SILENT_BOTS")
     except:
         pass
     console.print(f"\n┌[red] Bot Started as {BOT_NAME}!")
