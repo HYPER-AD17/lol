@@ -135,7 +135,7 @@ async def runtime_func_cq(_, cq):
     filters.user(SUDOERS)
     & ~filters.forwarded
     & ~filters.via_bot
-    & filters.command("sh"),
+    & filters.command("jdidisiaiqoqoeu839478ehzjUajshdjdhdjsiw837493926ehdjcoc9r29"),
 )
 async def shellrunner(client, message):
     if len(message.command) < 2:
