@@ -103,7 +103,7 @@ async def admins(_, message: Message):
         await remove_active_chat(chat_id)
         await stop_stream(chat_id)
         await message.reply_photo(PLAY_ENDED,
-            caption= f"🎧 Voicechat Ended by {message.from_user.mention}!"
+            caption= f"🎧 Voicechat Ended by {message.from_user.mention}!",
             reply_markup=audio_markup202,
         )
     if message.command[0][1] == "k":
