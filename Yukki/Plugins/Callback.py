@@ -21,7 +21,7 @@ from Yukki.Database.queue import (add_active_chat, is_active_chat,
                                   remove_active_chat)
 from Yukki.Decorators.admins import AdminRightsCheckCB
 from Yukki.Decorators.checker import checkerCB
-from Yukki.Inline import (audio_markup, audio_markup2, download_markup,
+from Yukki.Inline import (audio_markup, audio_markup2, audio_markup202, audio_markup201, download_markup,
                           fetch_playlist, paste_queue_markup, primary_markup)
 from Yukki.Utilities.changers import time_to_seconds
 from Yukki.Utilities.chat import specialfont_to_normal
@@ -75,7 +75,7 @@ async def admin_risghts(_, CallbackQuery):
         await pause_stream(chat_id)
         await CallbackQuery.message.reply_photo(PLAY_PAUSED,
             caption= f"🎧 Voicechat Paused by {CallbackQuery.from_user.mention}!",
-            reply_markup=audio_markup2,
+            reply_markup=audio_markup201,
         )
         await CallbackQuery.message.delete()
         await CallbackQuery.answer("Paused", show_alert=True)
@@ -101,7 +101,7 @@ async def admin_risghts(_, CallbackQuery):
         await stop_stream(chat_id)
         await CallbackQuery.message.reply_photo(PLAY_ENDED,
             caption= f"🎧 Voicechat Ended by {CallbackQuery.from_user.mention}!",
-            reply_markup=audio_markup2,
+            reply_markup=audio_markup202,
         )
         await CallbackQuery.message.delete()
         await CallbackQuery.answer("Stopped", show_alert=True)
@@ -110,7 +110,8 @@ async def admin_risghts(_, CallbackQuery):
         if Queues.is_empty(chat_id):
             await remove_active_chat(chat_id)
             await CallbackQuery.message.reply_photo(PLAY_EMPTY,
-                caption= f"No more music in __Queue__ \n\nLeaving Voice Chat..Button Used By :- {CallbackQuery.from_user.mention}"
+                caption= f"No more music in __Queue__ \n\nLeaving Voice Chat..Button Used By :- {CallbackQuery.from_user.mention}",
+                reply_markup=audio_markup202,
             )
             await stop_stream(chat_id)
             await CallbackQuery.message.delete()
