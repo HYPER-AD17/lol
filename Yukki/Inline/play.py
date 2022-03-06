@@ -302,3 +302,32 @@ audio_markup2 = InlineKeyboardMarkup(
         ],
     ]
 )
+
+audio_markup201 = InlineKeyboardMarkup(
+    [
+        [
+            InlineKeyboardButton(text="ʀᴇsᴜᴍᴇ", callback_data=f"resumecb"),
+            InlineKeyboardButton(text="ᴇɴᴅ", callback_data=f"stopcb"),
+        ],
+        [
+            InlineKeyboardButton(
+                text="Dᴇᴠᴇʟᴏᴘᴇ💫",
+                url="https://t.me/SILENT_DEVS",
+            ),
+            InlineKeyboardButton(text="🗑𝗖𝗟𝗢𝗦𝗘", callback_data=f"close"),
+        ],
+    ]
+)
+
+
+audio_markup202 = InlineKeyboardMarkup(
+    [
+        [
+            InlineKeyboardButton(
+                text="Dᴇᴠᴇʟᴏᴘᴇ💫",
+                url="https://t.me/SILENT_DEVS",
+            ),
+            InlineKeyboardButton(text="🗑𝗖𝗟𝗢𝗦𝗘", callback_data=f"close"),
+        ],
+    ]
+)
