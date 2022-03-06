@@ -287,12 +287,14 @@ audio_markup2 = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(text="ʀᴇsᴜᴍᴇ", callback_data=f"resumecb"),
-            InlineKeyboardButton(text="sᴋɪᴘ", callback_data=f"skipcb"),
-        ],
-        [
-            InlineKeyboardButton(text="ᴘᴀᴜsᴇ", callback_data=f"pausecb"),
             InlineKeyboardButton(text="ᴇɴᴅ", callback_data=f"stopcb"),
         ],
-        [InlineKeyboardButton("🗑𝗖𝗟𝗢𝗦𝗘", callback_data="close")],
+        [
+            InlineKeyboardButton(
+                text="Dᴇᴠᴇʟᴏᴘᴇ💫",
+                url="https://t.me/SILENT_DEVS",
+            ),
+            InlineKeyboardButton("🗑𝗖𝗟𝗢𝗦𝗘", callback_data="close"),
+        ],
     ]
 )
