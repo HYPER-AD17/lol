@@ -111,7 +111,7 @@ async def play(_, message: Message):
             await message.reply_photo(
                 photo="Utils/Query.jpg",
                 caption=(
-                    "**Usage:** /play [ᴍᴜsɪᴄ ɴᴀᴍᴇ ᴏʀ ʏᴏᴜᴛᴜʙᴇ ʟɪɴᴋ ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴀᴜᴅɪᴏ]\ɴ\ɴɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴘʟᴀʏ ᴄᴏᴍᴍᴀɴᴅs!\nJᴜsᴛ ᴛᴀᴘ ᴏɴ ᴄᴏᴍᴍᴀɴᴅ ʙᴜᴛᴛᴏɴ ᴀᴘᴘᴇᴀʀ ʙᴇʟᴏᴡ."
+                    "**Usage:** /play [ᴍᴜsɪᴄ ɴᴀᴍᴇ ᴏʀ ʏᴏᴜᴛᴜʙᴇ ʟɪɴᴋ ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴀᴜᴅɪᴏ]\n\nɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴘʟᴀʏ ᴄᴏᴍᴍᴀɴᴅs!\nJᴜsᴛ ᴛᴀᴘ ᴏɴ ᴄᴏᴍᴍᴀɴᴅ ʙᴜᴛᴛᴏɴ ᴀᴘᴘᴇᴀʀ ʙᴇʟᴏᴡ."
                 ),
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
