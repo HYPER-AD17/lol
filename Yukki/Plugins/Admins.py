@@ -19,7 +19,8 @@ from Yukki.Database import (is_active_chat, is_music_playing, music_off,
                             music_on, remove_active_chat)
 from Yukki.Decorators.admins import AdminRightsCheck
 from Yukki.Decorators.checker import checker, checkerCB
-from Yukki.Inline import audio_markup, primary_markup
+from Yukki.Inline import (audio_markup, audio_markup2, audio_markup202, download_markup,
+                          fetch_playlist, paste_queue_markup, primary_markup)
 from Yukki.Utilities.changers import time_to_seconds
 from Yukki.Utilities.chat import specialfont_to_normal
 from Yukki.Utilities.theme import check_theme
@@ -82,7 +83,8 @@ async def admins(_, message: Message):
         await music_off(chat_id)
         await pause_stream(chat_id)
         await message.reply_photo(PLAY_PAUSED,
-            caption= f"🎧 Voicechat Paused by {message.from_user.mention}!"
+            caption= f"🎧 Voicechat Paused by {message.from_user.mention}!",
+            reply_markup=audio_markup202,
         )
     if message.command[0][1] == "e":
         if await is_music_playing(message.chat.id):
@@ -90,7 +92,8 @@ async def admins(_, message: Message):
         await music_on(chat_id)
         await resume_stream(chat_id)
         await message.reply_photo(PLAY_RESUMED,
-            caption= f"🎧 Voicechat Resumed by {message.from_user.mention}!"
+            caption= f"🎧 Voicechat Resumed by {message.from_user.mention}!",
+            reply_markup=audio_markup202,
         )
     if message.command[0][1] == "t" or message.command[0][1] == "n":
         try:
@@ -101,13 +104,15 @@ async def admins(_, message: Message):
         await stop_stream(chat_id)
         await message.reply_photo(PLAY_ENDED,
             caption= f"🎧 Voicechat Ended by {message.from_user.mention}!"
+            reply_markup=audio_markup202,
         )
     if message.command[0][1] == "k":
         Queues.task_done(chat_id)
         if Queues.is_empty(chat_id):
             await remove_active_chat(chat_id)
             await message.reply_photo(PLAY_EMPTY,
-                caption= "No more music in __Queue__ \n\nLeaving Voice Chat"
+                caption= "No more music in __Queue__ \n\nLeaving Voice Chat",
+                reply_markup=audio_markup202,
             )
             await stop_stream(chat_id)
             return
