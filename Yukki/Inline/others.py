@@ -27,9 +27,13 @@ def others_markup(videoid, user_id):
         ],
         [
             InlineKeyboardButton(
-                text="⬇️ 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝗔𝘂𝗱𝗶𝗼/𝗩𝗶𝗱𝗲𝗼",
+                text="⬇️𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱",
                 callback_data=f"audio_video_download {videoid}|{user_id}",
-            )
+            ),
+            InlineKeyboardButton(
+                text="Dᴇᴠᴇʟᴏᴘᴇ💫",
+                url="https://t.me/SILENT_DEVS",
+            ),
         ],
         [
             InlineKeyboardButton(
@@ -55,6 +59,10 @@ def download_markup(videoid, user_id):
             InlineKeyboardButton(
                 text="⬇️ 𝗩𝗶𝗱𝗲𝗼!!",
                 callback_data=f"gets video|{videoid}|{user_id}",
+            ),
+            InlineKeyboardButton(
+                text="Dᴇᴠᴇʟᴏᴘᴇ💫",
+                url="https://t.me/SILENT_DEVS",
             ),
         ],
         [
