@@ -8,7 +8,7 @@ def url_markup(videoid, duration, user_id, query, query_type):
     buttons = [
         [
             InlineKeyboardButton(
-                text="𝄞𝗣𝗟𝗔𝗬𝄞",
+                text="𝄞𝗣𝗟𝗔𝗬 𝗦𝗢𝗡𝗚𝄞",
                 callback_data=f"Yukki {videoid}|{duration}|{user_id}",
             ),
         ],
@@ -38,6 +38,12 @@ def url_markup(videoid, duration, user_id, query, query_type):
 
 def url_markup2(videoid, duration, user_id):
     buttons = [
+        [ 
+            InlineKeyboardButton(
+                text="Dᴇᴠᴇʟᴏᴘᴇ💫",
+                url="https://t.me/SILENT_DEVS",
+            ),
+        ],
         [
             InlineKeyboardButton(
                 text="▶️𝗣𝗟𝗔𝗬𝄞!",
@@ -159,13 +165,11 @@ def search_markup2(
 
 def secondary_markup(videoid, user_id):
     buttons = [
-        [
-            InlineKeyboardButton(text="ʀᴇsᴜᴍᴇ", callback_data=f"resumecb"),
-            InlineKeyboardButton(text="sᴋɪᴘ", callback_data=f"skipcb"),
-        ],
-        [
-            InlineKeyboardButton(text="ᴘᴀᴜsᴇ", callback_data=f"pausecb"),
-            InlineKeyboardButton(text="ᴇɴᴅ", callback_data=f"stopcb"),
+        [ 
+            InlineKeyboardButton(
+                text="Dᴇᴠᴇʟᴏᴘᴇ💫",
+                url="https://t.me/SILENT_DEVS",
+            ),
         ],
         [
             InlineKeyboardButton(
@@ -198,7 +202,8 @@ def primary_markup(videoid, user_id, current_time, total_time):
         ],
         [
             InlineKeyboardButton(
-                text="🔗𝄢𝗠𝗢𝗥𝗘𝄢", callback_data=f"other {videoid}|{user_id}"
+                text="Dᴇᴠᴇʟᴏᴘᴇ💫",
+                url="https://t.me/SILENT_DEVS",
             ),
             InlineKeyboardButton(text="🗑𝗖𝗟𝗢𝗦𝗘", callback_data=f"close"),
         ],
@@ -224,7 +229,8 @@ def timer_markup(videoid, user_id, current_time, total_time):
         ],
         [
             InlineKeyboardButton(
-                text="🔗𝄢𝗠𝗢𝗥𝗘𝄢", callback_data=f"other {videoid}|{user_id}"
+                text="Dᴇᴠᴇʟᴏᴘᴇ💫",
+                url="https://t.me/SILENT_DEVS",
             ),
             InlineKeyboardButton(text="🗑𝗖𝗟𝗢𝗦𝗘", callback_data=f"close"),
         ],
