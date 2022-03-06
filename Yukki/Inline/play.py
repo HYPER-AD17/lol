@@ -40,14 +40,14 @@ def url_markup2(videoid, duration, user_id):
     buttons = [
         [ 
             InlineKeyboardButton(
-                text="Dᴇᴠᴇʟᴏᴘᴇ💫",
-                url="https://t.me/SILENT_DEVS",
+                text="▶️𝗣𝗟𝗔𝗬 𝗦𝗢𝗡𝗚𝄞!",
+                callback_data=f"Yukki {videoid}|{duration}|{user_id}",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="▶️𝗣𝗟𝗔𝗬𝄞!",
-                callback_data=f"Yukki {videoid}|{duration}|{user_id}",
+                text="Dᴇᴠᴇʟᴏᴘᴇ💫",
+                url="https://t.me/SILENT_DEVS",
             ),
             InlineKeyboardButton(
                 text="🗑𝗖𝗟𝗢𝗦𝗘",
