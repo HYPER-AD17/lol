@@ -57,7 +57,11 @@ Only for Sudo Users
 - Check active voice chats on bot.
 
 """
-
+PLAY_PAUSED = "https://telegra.ph/file/37d4ea97e97877eb63f93.jpg"
+PLAY_ENDED = "https://telegra.ph/file/eb33b1f0daaecb911d013.jpg"
+PLAY_RESUMED = "https://telegra.ph/file/4e65d111fdb89809fe94e.jpg"
+#PLAY_SKIPED = "https://telegra.ph/file/78189a482f76fdc3f8185.jpg"
+PLAY_EMPTY = "https://telegra.ph/file/71abca6d0b300685a25e6.jpg"
 
 @app.on_message(
     filters.command(["pause", "skip", "resume", "stop", "end"])
@@ -77,16 +81,16 @@ async def admins(_, message: Message):
             return await message.reply_text("Music is already Paused.")
         await music_off(chat_id)
         await pause_stream(chat_id)
-        await message.reply_text(
-            f"🎧 Voicechat Paused by {message.from_user.mention}!"
+        await message.reply_photo(PLAY_PAUSED,
+            caption= f"🎧 Voicechat Paused by {message.from_user.mention}!"
         )
     if message.command[0][1] == "e":
         if await is_music_playing(message.chat.id):
             return await message.reply_text("Music is already Playing.")
         await music_on(chat_id)
         await resume_stream(chat_id)
-        await message.reply_text(
-            f"🎧 Voicechat Resumed by {message.from_user.mention}!"
+        await message.reply_photo(PLAY_RESUMED,
+            caption= f"🎧 Voicechat Resumed by {message.from_user.mention}!"
         )
     if message.command[0][1] == "t" or message.command[0][1] == "n":
         try:
@@ -95,15 +99,15 @@ async def admins(_, message: Message):
             pass
         await remove_active_chat(chat_id)
         await stop_stream(chat_id)
-        await message.reply_text(
-            f"🎧 Voicechat End/Stopped by {message.from_user.mention}!"
+        await message.reply_photo(PLAY_ENDED,
+            caption= f"🎧 Voicechat Ended by {message.from_user.mention}!"
         )
     if message.command[0][1] == "k":
         Queues.task_done(chat_id)
         if Queues.is_empty(chat_id):
             await remove_active_chat(chat_id)
-            await message.reply_text(
-                "No more music in __Queue__ \n\nLeaving Voice Chat"
+            await message.reply_photo(PLAY_EMPTY,
+                caption= "No more music in __Queue__ \n\nLeaving Voice Chat"
             )
             await stop_stream(chat_id)
             return
