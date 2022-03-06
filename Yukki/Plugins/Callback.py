@@ -46,6 +46,12 @@ async def forceclose(_, CallbackQuery):
     await CallbackQuery.message.delete()
     await CallbackQuery.answer()
 
+PLAY_PAUSED = "https://telegra.ph/file/37d4ea97e97877eb63f93.jpg"
+PLAY_ENDED = "https://telegra.ph/file/eb33b1f0daaecb911d013.jpg"
+PLAY_RESUMED = "https://telegra.ph/file/4e65d111fdb89809fe94e.jpg"
+#PLAY_SKIPED = "https://telegra.ph/file/78189a482f76fdc3f8185.jpg"
+PLAY_EMPTY = "https://telegra.ph/file/71abca6d0b300685a25e6.jpg"
+
 
 @app.on_callback_query(
     filters.regex(pattern=r"^(pausecb|skipcb|stopcb|resumecb)$")
@@ -67,8 +73,8 @@ async def admin_risghts(_, CallbackQuery):
             )
         await music_off(chat_id)
         await pause_stream(chat_id)
-        await CallbackQuery.message.reply_text(
-            f"🎧 Voicechat Paused by {CallbackQuery.from_user.mention}!",
+        await CallbackQuery.message.reply_photo(PLAY_PAUSED,
+            caption= f"🎧 Voicechat Paused by {CallbackQuery.from_user.mention}!",
             reply_markup=audio_markup2,
         )
         await CallbackQuery.message.delete()
@@ -80,8 +86,8 @@ async def admin_risghts(_, CallbackQuery):
             )
         await music_on(chat_id)
         await resume_stream(chat_id)
-        await CallbackQuery.message.reply_text(
-            f"🎧 Voicechat Resumed by {CallbackQuery.from_user.mention}!",
+        await CallbackQuery.message.reply_photo(PLAY_RESUMED,
+            caption= f"🎧 Voicechat Resumed by {CallbackQuery.from_user.mention}!",
             reply_markup=audio_markup2,
         )
         await CallbackQuery.message.delete()
@@ -93,8 +99,8 @@ async def admin_risghts(_, CallbackQuery):
             pass
         await remove_active_chat(chat_id)
         await stop_stream(chat_id)
-        await CallbackQuery.message.reply_text(
-            f"🎧 Voicechat End/Stopped by {CallbackQuery.from_user.mention}!",
+        await CallbackQuery.message.reply_photo(PLAY_ENDED,
+            caption= f"🎧 Voicechat Ended by {CallbackQuery.from_user.mention}!",
             reply_markup=audio_markup2,
         )
         await CallbackQuery.message.delete()
@@ -103,8 +109,8 @@ async def admin_risghts(_, CallbackQuery):
         Queues.task_done(chat_id)
         if Queues.is_empty(chat_id):
             await remove_active_chat(chat_id)
-            await CallbackQuery.message.reply_text(
-                f"No more music in __Queue__ \n\nLeaving Voice Chat..Button Used By :- {CallbackQuery.from_user.mention}"
+            await CallbackQuery.message.reply_photo(PLAY_EMPTY,
+                caption= f"No more music in __Queue__ \n\nLeaving Voice Chat..Button Used By :- {CallbackQuery.from_user.mention}"
             )
             await stop_stream(chat_id)
             await CallbackQuery.message.delete()
