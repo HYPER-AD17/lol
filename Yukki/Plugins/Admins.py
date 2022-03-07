@@ -83,7 +83,7 @@ async def admins(_, message: Message):
         await music_off(chat_id)
         await pause_stream(chat_id)
         await message.reply_photo(PLAY_PAUSED,
-            caption= f"🎧 Voicechat Paused by {message.from_user.mention}!",
+            caption= f"🎧 Voicechat Paused by {message.from_user.mention}!\n\n✘ /resume :- Resume the paused Stream again!!!✨",
             reply_markup=audio_markup202,
         )
     if message.command[0][1] == "e":
@@ -92,7 +92,7 @@ async def admins(_, message: Message):
         await music_on(chat_id)
         await resume_stream(chat_id)
         await message.reply_photo(PLAY_RESUMED,
-            caption= f"🎧 Voicechat Resumed by {message.from_user.mention}!",
+            caption= f"🎧 Voicechat Resumed by {message.from_user.mention}!\n\n✘ /pause :- Pause the current Stream!!!✨",
             reply_markup=audio_markup202,
         )
     if message.command[0][1] == "t" or message.command[0][1] == "n":
@@ -103,7 +103,7 @@ async def admins(_, message: Message):
         await remove_active_chat(chat_id)
         await stop_stream(chat_id)
         await message.reply_photo(PLAY_ENDED,
-            caption= f"🎧 Voicechat Ended by {message.from_user.mention}!",
+            caption= f"🎧 Voicechat Ended by {message.from_user.mention}!\n\nBye Bye, Leaving voice chat!!!✨",
             reply_markup=audio_markup202,
         )
     if message.command[0][1] == "k":
