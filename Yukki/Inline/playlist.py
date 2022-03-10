@@ -20,8 +20,12 @@ def check_markup(user_name, user_id, videoid):
 def playlist_markup(user_name, user_id, videoid):
     buttons = [
         [   InlineKeyboardButton(
-                text=f"✨ᴄᴏᴍᴍᴀɴᴅs⚡",
+                text=f"✨Cᴍᴅs⚡",
                 url="https://telegra.ph/%E1%B4%85%E1%B4%87%E1%B4%A0%E1%B4%9CMusic-02-11",
+            ),
+            InlineKeyboardButton(
+                text="Dᴇᴠᴇʟᴏᴘᴇʀ💫",
+                url="https://t.me/SILENT_DEVS",
             ),
         ],
         [
