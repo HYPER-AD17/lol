@@ -86,17 +86,19 @@ async def play(_, message: Message):
             mystic,
         )
     elif url:
-        mystic = await message.reply_text("🔄 𝗣𝗿𝗼𝗰𝗲𝘀𝘀𝗶𝗻𝗴 𝗬𝗼𝘂𝗿 𝗦𝗼𝗻𝗴....𝗪𝗮𝗶𝘁!!")
+        mystic = await message.reply_text("🔍 **𝗛𝗺𝗺!! 𝗦𝗲𝗮𝗿𝗰𝗵𝗶𝗻𝗴**...")
         query = message.text.split(None, 1)[1]
- ​       (
- ​           title​, 
- ​           duration_min​, 
- ​           duration_sec​, 
- ​           thumb​, 
- ​           ​videoid​, 
- ​       ) ​=​ ​get_yt_info_query​(​query​)
+        (
+            title,
+            duration_min,
+            duration_sec,
+            thumb,
+            videoid,
+        ) = get_yt_info_query(query)
         await mystic.delete()
-        buttons = url_markup2(videoid, duration_min, message.from_user.id, query, 0)
+        buttons = url_markup(
+            videoid, duration_min, message.from_user.id, query, 0
+        )
         return await message.reply_photo(
             photo=thumb,
             caption=f"📎𝗧𝗶𝘁𝗹𝗲: **{title}\n\n⏳𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:** {duration_min} Mins\n\n__",
