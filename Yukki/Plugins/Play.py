@@ -109,13 +109,6 @@ async def play(_, message: Message):
  ​            ​thumb​, 
  ​            ​videoid​, 
  ​        ) ​=​ ​get_yt_info_query​(​query​)
-        (
-            title,
-            duration_min,
-            duration_sec,
-            thumb,
-            videoid,
-        ) = get_yt_info_query(query)
         await mystic.delete()
         buttons = url_markup2(videoid, duration_min, message.from_user.id, query, 0)
         return await message.reply_photo(
