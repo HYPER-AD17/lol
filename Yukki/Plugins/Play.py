@@ -88,13 +88,13 @@ async def play(_, message: Message):
     elif url:
         mystic = await message.reply_text("🔄 𝗣𝗿𝗼𝗰𝗲𝘀𝘀𝗶𝗻𝗴 𝗬𝗼𝘂𝗿 𝗦𝗼𝗻𝗴....𝗪𝗮𝗶𝘁!!")
         query = message.text.split(None, 1)[1]
- ​           ( 
+ ​       (
  ​            ​title​, 
  ​            ​duration_min​, 
  ​            ​duration_sec​, 
  ​            ​thumb​, 
  ​            ​videoid​, 
- ​        ) ​=​ ​get_yt_info_query​(​query​)
+ ​       ) ​=​ ​get_yt_info_query​(​query​)
         await mystic.delete()
         buttons = url_markup2(videoid, duration_min, message.from_user.id, query, 0)
         return await message.reply_photo(
