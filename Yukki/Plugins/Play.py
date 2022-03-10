@@ -87,11 +87,8 @@ async def play(_, message: Message):
         )
     elif url:
         mystic = await message.reply_text("🔄 𝗣𝗿𝗼𝗰𝗲𝘀𝘀𝗶𝗻𝗴 𝗬𝗼𝘂𝗿 𝗦𝗼𝗻𝗴....𝗪𝗮𝗶𝘁!!")
-​        ​if​ ​not​ ​message​.​reply_to_message​:
              query = message.text.split(None, 1)[1]
-​        ​else​: 
- ​            ​query​ ​=​ ​message​.​reply_to_message​.​text 
- ​        ( 
+ ​            ​query​ ​=​ ​message​.​reply_to_message​.​text( 
  ​            ​title​, 
  ​            ​duration_min​, 
  ​            ​duration_sec​, 
