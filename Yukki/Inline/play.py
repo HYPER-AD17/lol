@@ -46,8 +46,18 @@ def url_markup(videoid, duration, user_id, query, query_type):
                 callback_data=f"Yukki {videoid}|{duration}|{user_id}",
             ),
             InlineKeyboardButton(
+                text="🔎𝗠𝗢𝗥𝗘!!",
+                callback_data=f"Search {query}|{user_id}",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="Dᴇᴠᴇʟᴏᴘᴇʀ💫",
+                url="https://t.me/SILENT_DEVS",
+            ),
+            InlineKeyboardButton(
                 text="🗑𝗖𝗟𝗢𝗦𝗘",
-                callback_data=f"forceclose {videoid}|{user_id}",
+                callback_data=f"forceclose {query}|{user_id}",
             ),
         ],
     ]
