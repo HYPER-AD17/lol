@@ -163,7 +163,7 @@ def secondary_markup(videoid, user_id):
     buttons = [
         [ 
             InlineKeyboardButton(
-                text="Dᴇᴠᴇʟᴏᴘᴇ💫",
+                text="Dᴇᴠᴇʟᴏᴘᴇʀ💫",
                 url="https://t.me/SILENT_DEVS",
             ),
         ],
@@ -299,7 +299,7 @@ audio_markup201 = InlineKeyboardMarkup(
         ],
         [
             InlineKeyboardButton(
-                text="Dᴇᴠᴇʟᴏᴘᴇ💫",
+                text="Dᴇᴠᴇʟᴏᴘᴇʀ💫",
                 url="https://t.me/SILENT_DEVS",
             ),
             InlineKeyboardButton(text="🗑𝗖𝗟𝗢𝗦𝗘", callback_data=f"close"),
@@ -312,7 +312,7 @@ audio_markup202 = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text="Dᴇᴠᴇʟᴏᴘᴇ💫",
+                text="Dᴇᴠᴇʟᴏᴘᴇʀ💫",
                 url="https://t.me/SILENT_DEVS",
             ),
             InlineKeyboardButton(text="🗑𝗖𝗟𝗢𝗦𝗘", callback_data=f"close"),
