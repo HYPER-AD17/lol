@@ -42,7 +42,7 @@ def url_markup(videoid, duration, user_id, query, query_type):
     buttons = [
         [ 
             InlineKeyboardButton(
-                text="▶️𝗣𝗟𝗔𝗬 𝗦𝗢𝗡𝗚𝄞!",
+                text="▶️𝗣𝗟𝗔𝗬𝄞!",
                 callback_data=f"Yukki {videoid}|{duration}|{user_id}",
             ),
             InlineKeyboardButton(
