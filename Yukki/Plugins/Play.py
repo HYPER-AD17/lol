@@ -51,6 +51,16 @@ async def play(_, message: Message):
         mystic = await message.reply_text(
             "🔄 𝗣𝗿𝗼𝗰𝗲𝘀𝘀𝗶𝗻𝗴.....𝗪𝗮𝗶𝘁 𝗕𝘂𝗱𝗱𝗶😇"
         )
+​        ​try​: 
+ ​            ​read​ ​=​ ​db_mem​[​message​.​chat​.​id​][​"live_check"​] 
+ ​            ​if​ ​read​: 
+ ​                ​return​ ​await​ ​mystic​.​edit​( 
+ ​                    ​"Live Streaming Playing...Stop it to play music" 
+ ​                ) 
+ ​            ​else​: 
+ ​                ​pass 
+ ​        ​except​: 
+ ​            ​pass
 
         if audio.file_size > 157286400:
             return await mystic.edit_text(
@@ -88,7 +98,17 @@ async def play(_, message: Message):
         )
     elif url:
         mystic = await message.reply_text("🔄 𝗣𝗿𝗼𝗰𝗲𝘀𝘀𝗶𝗻𝗴 𝗬𝗼𝘂𝗿 𝗦𝗼𝗻𝗴....𝗪𝗮𝗶𝘁!!")
-        query = message.text.split(None, 1)[1]
+​        ​if​ ​not​ ​message​.​reply_to_message​:
+             query = message.text.split(None, 1)[1]
+​        ​else​: 
+ ​            ​query​ ​=​ ​message​.​reply_to_message​.​text 
+ ​        ( 
+ ​            ​title​, 
+ ​            ​duration_min​, 
+ ​            ​duration_sec​, 
+ ​            ​thumb​, 
+ ​            ​videoid​, 
+ ​        ) ​=​ ​get_yt_info_query​(​query​)
         (
             title,
             duration_min,
