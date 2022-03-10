@@ -293,7 +293,7 @@ def get_type(type, format, videoid, user_id):
                     callback_data=f"good {videoid}|{user_id}",
                 ),
                 InlineKeyboardButton(
-                    text="𝗔𝘂𝗱𝗶𝗼🎵", callback_data=f"close2"
+                    text="🗑️𝗖𝗹𝗼𝘀𝗲", callback_data=f"close2"
                 ),
             ],
         ]
