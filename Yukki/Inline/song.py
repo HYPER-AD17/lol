@@ -25,7 +25,7 @@ def song_markup(videoid, duration, user_id, query, query_type):
                 callback_data=f"forceclose {query}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="Dᴇᴠᴇʟᴏᴘᴇ💫",
+                text="Dᴇᴠᴇʟᴏᴘᴇʀ💫",
                 url="https://t.me/SILENT_DEVS",
             ),
         ],
@@ -51,7 +51,7 @@ def song_download_markup(videoid, user_id):
                 callback_data=f"forceclose {videoid}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="Dᴇᴠᴇʟᴏᴘᴇ💫",
+                text="Dᴇᴠᴇʟᴏᴘᴇʀ💫",
                 url="https://t.me/SILENT_DEVS",
             ),
         ],
