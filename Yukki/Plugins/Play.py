@@ -14,7 +14,7 @@ from Yukki.Decorators.assistant import AssistantAdd
 from Yukki.Decorators.checker import checker
 from Yukki.Decorators.permission import PermissionCheck
 from Yukki.Inline import (playlist_markup, search_markup, search_markup2,
-                          url_markup, url_markup2)
+                          url_markup)
 from Yukki.Utilities.changers import seconds_to_min, time_to_seconds
 from Yukki.Utilities.chat import specialfont_to_normal
 from Yukki.Utilities.stream import start_stream, start_stream_audio
