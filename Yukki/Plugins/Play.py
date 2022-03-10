@@ -51,17 +51,6 @@ async def play(_, message: Message):
         mystic = await message.reply_text(
             "🔄 𝗣𝗿𝗼𝗰𝗲𝘀𝘀𝗶𝗻𝗴.....𝗪𝗮𝗶𝘁 𝗕𝘂𝗱𝗱𝗶😇"
         )
-​    try​: 
- ​        read​ ​=​ ​db_mem​[​message​.​chat​.​id​][​"live_check"​] 
- ​       ​if​ ​read​: 
- ​           ​return​ ​await​ ​mystic​.​edit​( 
- ​                "Live Streaming Playing...Stop it to play music" 
- ​                ) 
- ​        else​: 
- ​            pass 
- ​    ​except​: 
- ​        ​pass
-
         if audio.file_size > 157286400:
             return await mystic.edit_text(
                 "Audio File Size Should Be Less Than 150 mb"
