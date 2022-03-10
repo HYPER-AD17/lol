@@ -36,7 +36,7 @@ def url_markup(videoid, duration, user_id, query, query_type):
     return buttons
 
 '''
-def url_markup2(videoid, duration, user_id, query, query_type):
+def url_markup(videoid, duration, user_id, query, query_type):
     buttons = [
         [ 
             InlineKeyboardButton(
