@@ -60,10 +60,6 @@ def download_markup(videoid, user_id):
                 text="⬇️ 𝗩𝗶𝗱𝗲𝗼!!",
                 callback_data=f"gets video|{videoid}|{user_id}",
             ),
-            InlineKeyboardButton(
-                text="Dᴇᴠᴇʟᴏᴘᴇ💫",
-                url="https://t.me/SILENT_DEVS",
-            ),
         ],
         [
             InlineKeyboardButton(
