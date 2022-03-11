@@ -163,6 +163,10 @@ def secondary_markup(videoid, user_id):
     buttons = [
         [ 
             InlineKeyboardButton(
+                text="✨Uᴘᴅᴀᴛᴇs",
+                url=f"https://t.me/SILENT_BOTS",
+            ),
+            InlineKeyboardButton(
                 text="Dᴇᴠᴇʟᴏᴘᴇʀ💫",
                 url="https://t.me/SILENT_DEVS",
             ),
