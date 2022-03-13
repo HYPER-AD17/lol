@@ -28,7 +28,7 @@ loop = asyncio.get_event_loop()
 
 
 @app.on_message(
-    filters.command(["play", "p", "ytt", f"p@{BOT_USERNAME}", f"ytt@{BOT_USERNAME}", f"play@{BOT_USERNAME}"]) & filters.group
+    filters.command(["play", "p", f"p@{BOT_USERNAME}", f"play@{BOT_USERNAME}"]) & filters.group
 )
 @checker
 @PermissionCheck
