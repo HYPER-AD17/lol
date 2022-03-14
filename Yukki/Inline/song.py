@@ -19,12 +19,12 @@ def song_markup(videoid, duration, user_id, query, query_type):
         ],
         [
             InlineKeyboardButton(
-                text="Dᴇᴠᴇʟᴏᴘᴇʀ💫",
-                url="https://t.me/SILENT_DEVS",
-            ),
-            InlineKeyboardButton(
                 text="🗑ᴄʟᴏsᴇ",
                 callback_data=f"forceclose {query}|{user_id}",
+            ),
+            InlineKeyboardButton(
+                text="Dᴇᴠᴇʟᴏᴘᴇʀ💫",
+                url="https://t.me/SILENT_DEVS",
             ),
         ],
     ]
@@ -45,12 +45,12 @@ def song_download_markup(videoid, user_id):
         ],
         [
             InlineKeyboardButton(
-                text="Dᴇᴠᴇʟᴏᴘᴇʀ💫",
-                url="https://t.me/SILENT_DEVS",
-            ),
-            InlineKeyboardButton(
                 text="🗑ᴄʟᴏsᴇ",
                 callback_data=f"forceclose {query}|{user_id}",
+            ),
+            InlineKeyboardButton(
+                text="Dᴇᴠᴇʟᴏᴘᴇʀ💫",
+                url="https://t.me/SILENT_DEVS",
             ),
         ],
     ]
