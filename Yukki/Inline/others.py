@@ -11,37 +11,37 @@ def others_markup(videoid, user_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="🔎𝗦𝗲𝗮𝗿𝗰𝗵 𝗟𝘆𝗿𝗶𝗰𝘀",
+                text="🔎ʟʏʀɪᴄs",
                 callback_data=f"lyrics {videoid}|{user_id}",
             )
         ],
         [
             InlineKeyboardButton(
-                text="✚ 𝗬𝗼𝘂𝗿 𝗣𝗹𝗮𝘆𝗹𝗶𝘀𝘁",
+                text="✚ʏᴏᴜʀ ᴘʟᴀʏʟɪsᴛ",
                 callback_data=f"your_playlist {videoid}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="✚ 𝗚𝗿𝗼𝘂𝗽 𝗣𝗹𝗮𝘆𝗹𝗶𝘀𝘁",
+                text="✚ɢʀᴏᴜᴘ ᴘʟᴀʏʟɪsᴛ",
                 callback_data=f"group_playlist {videoid}|{user_id}",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="⬇️𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱",
+                text="▿ᴅᴏᴡɴʟᴏᴀᴅ▿",
                 callback_data=f"audio_video_download {videoid}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="Dᴇᴠᴇʟᴏᴘᴇ💫",
+                text="ᴅᴇᴠᴇʟᴏᴘᴇ💫",
                 url="https://t.me/SILENT_DEVS",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="⬅️ 𝗚𝗼 𝗕𝗮𝗰𝗸",
+                text="«ɢᴏ-ʙᴀᴄᴋ«",
                 callback_data=f"pr_go_back_timer {videoid}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="🗑 𝗖𝗹𝗼𝘀𝗲!",
+                text="×ᴄʟᴏsᴇ×!",
                 callback_data=f"close",
             ),
         ],
@@ -53,19 +53,19 @@ def download_markup(videoid, user_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="⬇️ 𝗔𝘂𝗱𝗶𝗼!!",
+                text="▿ᴀᴜᴅɪᴏ♫︎",
                 callback_data=f"gets audio|{videoid}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="⬇️ 𝗩𝗶𝗱𝗲𝗼!!",
+                text="▿ᴠɪᴅᴇᴏ✰",
                 callback_data=f"gets video|{videoid}|{user_id}",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="⬅️ 𝗚𝗼 𝗕𝗮𝗰𝗸", callback_data=f"goback {videoid}|{user_id}"
+                text="«ɢᴏ-ʙᴀᴄᴋ«", callback_data=f"goback {videoid}|{user_id}"
             ),
-            InlineKeyboardButton(text="🗑 𝗖𝗹𝗼𝘀𝗲!!", callback_data=f"close"),
+            InlineKeyboardButton(text="×ᴄʟᴏsᴇ×", callback_data=f"close"),
         ],
     ]
     return buttons
