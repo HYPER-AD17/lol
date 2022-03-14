@@ -49,17 +49,17 @@ async def play(_, message: Message):
     url = get_url(message)
     if audio:
         mystic = await message.reply_text(
-            "🔄 𝗣𝗿𝗼𝗰𝗲𝘀𝘀𝗶𝗻𝗴.....𝗪𝗮𝗶𝘁 𝗕𝘂𝗱𝗱𝗶😇"
+            "🔄ʏᴏʏᴏ ᴘʀᴏᴄᴇssɪɴɢ ʏᴏᴜʀ ɢɪᴠᴇɴ ǫᴜᴇʀʏ.."
         )
         if audio.file_size > 157286400:
             return await mystic.edit_text(
-                "Audio File Size Should Be Less Than 150 mb"
+                "ᴀᴜᴅɪᴏ ꜰɪʟᴇ sɪᴢᴇ sʜᴏᴜʟᴅ ʙᴇ ʟᴇss ᴛʜᴀɴ 150 ᴍʙ"
             )
         duration_min = seconds_to_min(audio.duration)
         duration_sec = audio.duration
         if (audio.duration) > DURATION_LIMIT:
             return await mystic.edit_text(
-                f"**Duration Limit Exceeded**\n\n**Allowed Duration: **{DURATION_LIMIT_MIN} minute(s)\n**Received Duration:** {duration_min} minute(s)"
+                f"**ᴅᴜʀᴀᴛɪᴏɴ ʟɪᴍɪᴛ ᴇxᴄᴇᴇᴅ**\n\n**ᴀʟʟᴏᴡᴇᴅ ᴅᴜʀᴀᴛɪᴏɴ: **{DURATION_LIMIT_MIN} minute(s)\n**ʏᴏᴜʀ ǫᴜᴀʀʏ's ᴅᴜʀᴀᴛɪᴏɴ:** {duration_min} minute(s)"
             )
         file_name = (
             audio.file_unique_id
@@ -86,7 +86,7 @@ async def play(_, message: Message):
             mystic,
         )
     elif url:
-        mystic = await message.reply_text("🔍 **𝗛𝗺𝗺!! 𝗦𝗲𝗮𝗿𝗰𝗵𝗶𝗻𝗴**...")
+        mystic = await message.reply_text("🔍 **ʏᴏʏᴏ ᴘᴇᴏᴄᴇssɪɴɢ**...")
         query = message.text.split(None, 1)[1]
         (
             title,
@@ -101,7 +101,7 @@ async def play(_, message: Message):
         )
         return await message.reply_photo(
             photo=thumb,
-            caption=f"📎𝗧𝗶𝘁𝗹𝗲: **{title}\n\n⏳𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:** {duration_min} Mins\n\n__",
+            caption=f"📎ᴛɪᴛʟᴇ: **{title}\n\n⏳ᴅᴜʀᴀᴛɪᴏɴ* {duration_min} Mins\n\n__",
             reply_markup=InlineKeyboardMarkup(buttons),
         )
     else:
@@ -117,7 +117,7 @@ async def play(_, message: Message):
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
             return
-        mystic = await message.reply_text("🔍 **𝗛𝗺𝗺!! 𝗦𝗲𝗮𝗿𝗰𝗵𝗶𝗻𝗴**...")
+        mystic = await message.reply_text("🔍 **ʜᴜʜ sᴇᴀʀᴄʜɪɴɢ**...")
         query = message.text.split(None, 1)[1]
         (
             title,
@@ -132,7 +132,7 @@ async def play(_, message: Message):
         )
         return await message.reply_photo(
             photo=thumb,
-            caption=f"📎𝗧𝗶𝘁𝗹𝗲: **{title}\n\n⏳𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:** {duration_min} Mins\n\n__",
+            caption=f"📎ᴛɪᴛʟᴇ: **{title}\n\n⏳ᴅᴜʀᴀᴛɪᴏɴ:** {duration_min} Mins\n\n__",
             reply_markup=InlineKeyboardMarkup(buttons),
         )
 
@@ -148,17 +148,17 @@ async def startyuplay(_, CallbackQuery):
     videoid, duration, user_id = callback_request.split("|")
     if str(duration) == "None":
         return await CallbackQuery.answer(
-            f"Sorry! Its a Live Video.", show_alert=True
+            f"ᴏᴏᴘs ɪᴛs ʟɪᴠᴇ ᴠɪᴅᴇᴏ", show_alert=True
         )
     if CallbackQuery.from_user.id != int(user_id):
         return await CallbackQuery.answer(
-            "This is not for you! Search You Own Song.", show_alert=True
+            "ᴛʜɪs ɪᴢ ɴᴏᴛ ғᴏʀ ᴜʜ sᴇᴀʀᴄʜ ʏᴏᴜʀ ᴏᴡɴ sʜɪᴛ!!.", show_alert=True
         )
     await CallbackQuery.message.delete()
     title, duration_min, duration_sec, thumbnail = get_yt_info_id(videoid)
     if duration_sec > DURATION_LIMIT:
         return await CallbackQuery.message.reply_text(
-            f"**Duration Limit Exceeded**\n\n**Allowed Duration: **{DURATION_LIMIT_MIN} minute(s)\n**Received Duration:** {duration_min} minute(s)"
+            f"**ᴅᴜʀᴀᴛɪᴏɴ ʟɪᴍɪᴛ ᴇxᴄᴇᴇᴅ**\n\n**ᴀʟʟᴏᴡᴇᴅ ᴅᴜʀᴀᴛɪᴏɴ: **{DURATION_LIMIT_MIN} minute(s)\n**ʏᴏᴜʀ ǫᴜᴀʀʏ's ᴅᴜʀᴀᴛɪᴏɴ:** {duration_min} minute(s)"
         )
     await CallbackQuery.answer(f"Processing:- {title[:20]}", show_alert=True)
     mystic = await CallbackQuery.message.reply_text(
@@ -307,7 +307,7 @@ async def slider_query_results(_, CallbackQuery):
         )
         med = InputMediaPhoto(
             media=thumb,
-            caption=f"📎𝗧𝗶𝘁𝗹𝗲: **{title}\n\n⏳𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:** {duration_min} Mins\n\n__",
+            caption=f"📎ᴛɪᴛʟᴇ: **{title}\n\n⏳ᴅᴜʀᴀᴛɪᴏɴ:** {duration_min} Mins\n\n__",
         )
         return await CallbackQuery.edit_message_media(
             media=med, reply_markup=InlineKeyboardMarkup(buttons)
@@ -330,7 +330,7 @@ async def slider_query_results(_, CallbackQuery):
         )
         med = InputMediaPhoto(
             media=thumb,
-            caption=f"📎𝗧𝗶𝘁𝗹𝗲: **{title}\n\n⏳𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:** {duration_min} Mins\n\n__",
+            caption=f"📎ᴛɪᴛʟᴇ: **{title}\n\n⏳ᴅᴜʀᴀᴛɪᴏɴ:** {duration_min} Mins\n\n__",
         )
         return await CallbackQuery.edit_message_media(
             media=med, reply_markup=InlineKeyboardMarkup(buttons)
