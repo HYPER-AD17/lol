@@ -83,7 +83,7 @@ async def admins(_, message: Message):
         await music_off(chat_id)
         await pause_stream(chat_id)
         await message.reply_photo(PLAY_PAUSED,
-            caption= f"🎧 Voicechat Paused by {message.from_user.mention}!\n\n✘ /resume :- Resume the paused Stream again!!!✨",
+            caption= f"🎧 ᴠᴏɪᴄᴇᴄʜᴀᴛ ᴘᴀᴜsᴇᴅ ʙʏ {message.from_user.mention}!\n\n✘ /resume :- ʀᴇsᴜᴍᴇ ᴛʜᴇ ᴘᴀᴜsᴇᴅ sᴛʀᴇᴀᴍ ᴀɢᴀɪɴ!!!✨",
             reply_markup=audio_markup202,
         )
     if message.command[0][1] == "e":
@@ -92,7 +92,7 @@ async def admins(_, message: Message):
         await music_on(chat_id)
         await resume_stream(chat_id)
         await message.reply_photo(PLAY_RESUMED,
-            caption= f"🎧 Voicechat Resumed by {message.from_user.mention}!\n\n✘ /pause :- Pause the current Stream!!!✨",
+            caption= f"🎧 ᴠᴏɪᴄᴇᴄʜᴀᴛ ʀᴇsᴜᴍᴇᴅ ʙʏ {message.from_user.mention}!\n\n✘ /pause :- ᴘᴀᴜsᴇ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ sᴛʀᴇᴀᴍ!!!✨",
             reply_markup=audio_markup202,
         )
     if message.command[0][1] == "t" or message.command[0][1] == "n":
@@ -103,7 +103,7 @@ async def admins(_, message: Message):
         await remove_active_chat(chat_id)
         await stop_stream(chat_id)
         await message.reply_photo(PLAY_ENDED,
-            caption= f"🎧 Voicechat Ended by {message.from_user.mention}!\n\nBye Bye, Leaving voice chat!!!✨",
+            caption= f"🎧 ᴠᴏɪᴄᴇᴄʜᴀᴛ ᴇɴᴅᴇᴅ ʙʏ {message.from_user.mention}!\n\nʙʏᴇ ʙʏᴇ, ʟᴇᴀᴠɪɴɢ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ!!!✨",
             reply_markup=audio_markup202,
         )
     if message.command[0][1] == "k":
@@ -111,7 +111,7 @@ async def admins(_, message: Message):
         if Queues.is_empty(chat_id):
             await remove_active_chat(chat_id)
             await message.reply_photo(PLAY_EMPTY,
-                caption= "No more music in __Queue__ \n\nLeaving Voice Chat",
+                caption= "ɴᴏ ᴍᴏʀᴇ ᴍᴜsɪᴄ ɪɴ __ǫᴜᴇᴜᴇ__ \n\nʟᴇᴀᴠɪɴɢ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ",
                 reply_markup=audio_markup202,
             )
             await stop_stream(chat_id)
@@ -125,7 +125,7 @@ async def admins(_, message: Message):
             aud = 0
             if str(finxx) != "raw":
                 mystic = await message.reply_text(
-                    f"**{MUSIC_BOT_NAME} Playlist Function**\n\n__Downloading Next Music From Playlist....__"
+                    f"**{MUSIC_BOT_NAME} ᴘʟᴀʏʟɪsᴛ ꜰᴜɴᴄᴛɪᴏɴ**\n\n__ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ɴᴇxᴛ ᴍᴜsɪᴄ ꜰʀᴏᴍ ᴘʟᴀʏʟɪsᴛ....__"
                 )
                 (
                     title,
@@ -134,7 +134,7 @@ async def admins(_, message: Message):
                     thumbnail,
                 ) = get_yt_info_id(videoid)
                 await mystic.edit(
-                    f"**{MUSIC_BOT_NAME} Downloader**\n\n**Title:** {title[:50]}\n\n0% ____________ 100%"
+                    f"**{MUSIC_BOT_NAME} ᴅᴏᴡɴʟᴏᴀᴅᴇʀ**\n\n**ᴛɪᴛʟᴇ:** {title[:50]}\n\n0% ____________ 100%"
                 )
                 downloaded_file = await loop.run_in_executor(
                     None, download, videoid, mystic, title
@@ -155,7 +155,7 @@ async def admins(_, message: Message):
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),
                     caption=(
-                        f"<b>__Skipped Voice Chat__</b>\n\n🎥<b>__Started Playing:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n⏳<b>__Duration:__</b> {duration_min} Mins\n👤**__Requested by:__** {mention}"
+                        f"<b>__sᴋɪᴘᴇᴅ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ__</b>\n\n♫︎<b>__sᴛᴀʀᴛᴇᴅ ᴘʟᴀʏɪɴɢ:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n⏳<b>__ᴅᴜʀᴀᴛɪᴏɴ:__</b> {duration_min} Mins\n🧚‍♀️**__ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ:__** {mention}"
                     ),
                 )
                 os.remove(thumb)
@@ -174,7 +174,7 @@ async def admins(_, message: Message):
                         duration_min,
                         duration_min,
                     )
-                    thumb = "Utils/Telegram.JPEG"
+                    thumb = "https://telegra.ph/file/9cc8f3b1a0751f6b27553.png"
                     aud = 1
                 else:
                     _path_ = _path_ = (
@@ -193,7 +193,7 @@ async def admins(_, message: Message):
                 final_output = await message.reply_photo(
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),
-                    caption=f"<b>__Skipped Voice Chat__</b>\n\n🎥<b>__Started Playing:__</b> {title} \n⏳<b>__Duration:__</b> {duration_min} \n👤<b>__Requested by:__ </b> {mention}",
+                    caption=f"<b>__sᴋɪᴘᴘᴇᴅ ᴠᴄ__</b>\n\n♫︎<b>__sᴛᴀʀᴛ ᴘʟᴀʏɪɴɢ:__</b> {title} \n⏳<b>__ᴅᴜʀᴀᴛɪᴏɴ:__</b> {duration_min} \n🧚‍♀️<b>__ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ:__ </b> {mention}",
                 )
             await start_timer(
                 videoid,
