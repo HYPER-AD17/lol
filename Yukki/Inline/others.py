@@ -32,7 +32,7 @@ def others_markup(videoid, user_id):
             ),
             InlineKeyboardButton(
                 text="ᴅᴇᴠᴇʟᴏᴘᴇ💫",
-                url="https://t.me/SILENT_DEVS",
+                url="https://t.me/insane_bots",
             ),
         ],
         [
