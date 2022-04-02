@@ -24,7 +24,7 @@ def song_markup(videoid, duration, user_id, query, query_type):
             ),
             InlineKeyboardButton(
                 text="Dᴇᴠᴇʟᴏᴘᴇʀ💫",
-                url="https://t.me/SILENT_DEVS",
+                url="https://t.me/insane_bots",
             ),
         ],
     ]
@@ -50,7 +50,7 @@ def song_download_markup(videoid, user_id):
             ),
             InlineKeyboardButton(
                 text="Dᴇᴠᴇʟᴏᴘᴇʀ💫",
-                url="https://t.me/SILENT_DEVS",
+                url="https://t.me/insane_bots",
             ),
         ],
     ]
