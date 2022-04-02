@@ -160,11 +160,11 @@ def secondary_markup(videoid, user_id):
         [ 
             InlineKeyboardButton(
                 text="✨Uᴘᴅᴀᴛᴇs",
-                url=f"https://t.me/SILENT_BOTS",
+                url=f"https://t.me/insane_BOTS",
             ),
             InlineKeyboardButton(
                 text="Dᴇᴠᴇʟᴏᴘᴇʀ💫",
-                url="https://t.me/SILENT_DEVS",
+                url="https://t.me/x_d_nonsense",
             ),
         ],
         [
@@ -195,7 +195,7 @@ def primary_markup(videoid, user_id, current_time, total_time):
         [
             InlineKeyboardButton(
                 text="Dᴇᴠᴇʟᴏᴘᴇʀ💫",
-                url="https://t.me/SILENT_DEVS",
+                url="https://t.me/insane_bots",
             ),
             InlineKeyboardButton(text="🗑ᴄʟᴏsᴇ", callback_data=f"close"),
         ],
@@ -218,7 +218,7 @@ def timer_markup(videoid, user_id, current_time, total_time):
         [
             InlineKeyboardButton(
                 text="Dᴇᴠᴇʟᴏᴘᴇʀ💫",
-                url="https://t.me/SILENT_DEVS",
+                url="https://t.me/insane_bots",
             ),
             InlineKeyboardButton(text="🗑ᴄʟᴏsᴇ", callback_data=f"close"),
         ],
@@ -244,7 +244,7 @@ def audio_markup(videoid, user_id, current_time, total_time):
         [
             InlineKeyboardButton(
                 text="Dᴇᴠᴇʟᴏᴘᴇʀ💫",
-                url="https://t.me/SILENT_DEVS",
+                url="https://t.me/insane_bots",
             ),
             InlineKeyboardButton(text="🗑ᴄʟᴏsᴇ", callback_data=f"close"),
         ],
@@ -267,7 +267,7 @@ def audio_timer_markup_start(videoid, user_id, current_time, total_time):
         [
             InlineKeyboardButton(
                 text="Dᴇᴠᴇʟᴏᴘᴇʀ💫",
-                url="https://t.me/SILENT_DEVS",
+                url="https://t.me/x_d_nonsense",
             ),
             InlineKeyboardButton(text="🗑ᴄʟᴏsᴇ", callback_data=f"close"),
         ],
@@ -284,7 +284,7 @@ audio_markup2 = InlineKeyboardMarkup(
         [
             InlineKeyboardButton(
                 text="Dᴇᴠᴇʟᴏᴘᴇʀ💫",
-                url="https://t.me/SILENT_DEVS",
+                url="https://t.me/insane_bots",
             ),
             InlineKeyboardButton(text="🗑ᴄʟᴏsᴇ", callback_data=f"close"),
         ],
@@ -300,7 +300,7 @@ audio_markup201 = InlineKeyboardMarkup(
         [
             InlineKeyboardButton(
                 text="Dᴇᴠᴇʟᴏᴘᴇʀ💫",
-                url="https://t.me/SILENT_DEVS",
+                url="https://t.me/insane_bots",
             ),
             InlineKeyboardButton(text="🗑ᴄʟᴏsᴇ", callback_data=f"close"),
         ],
@@ -313,7 +313,7 @@ audio_markup202 = InlineKeyboardMarkup(
         [
             InlineKeyboardButton(
                 text="Dᴇᴠᴇʟᴏᴘᴇʀ💫",
-                url="https://t.me/SILENT_DEVS",
+                url="https://t.me/insane_bots",
             ),
             InlineKeyboardButton(text="🗑ᴄʟᴏsᴇ", callback_data=f"close"),
         ],
