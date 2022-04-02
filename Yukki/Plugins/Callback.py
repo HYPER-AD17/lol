@@ -46,11 +46,11 @@ async def forceclose(_, CallbackQuery):
     await CallbackQuery.message.delete()
     await CallbackQuery.answer()
 
-PLAY_PAUSED = "https://telegra.ph/file/37d4ea97e97877eb63f93.jpg"
-PLAY_ENDED = "https://telegra.ph/file/eb33b1f0daaecb911d013.jpg"
-PLAY_RESUMED = "https://telegra.ph/file/4e65d111fdb89809fe94e.jpg"
+PLAY_PAUSED = "https://telegra.ph/file/33fa7c456fc538422e2eb.jpg"
+PLAY_ENDED = "https://telegra.ph/file/03e9cfad426b997b55461.jpg"
+PLAY_RESUMED = "https://telegra.ph/file/d4ce9817e5dabd76750a9.jpg"
 #PLAY_SKIPED = "https://telegra.ph/file/78189a482f76fdc3f8185.jpg"
-PLAY_EMPTY = "https://telegra.ph/file/71abca6d0b300685a25e6.jpg"
+PLAY_EMPTY = "https://telegra.ph/file/6164e600805ff63a87708.jpg"
 
 
 @app.on_callback_query(
