@@ -25,7 +25,7 @@ def playlist_markup(user_name, user_id, videoid):
             ),
             InlineKeyboardButton(
                 text="Dᴇᴠᴇʟᴏᴘᴇʀ💫",
-                url="https://t.me/SILENT_DEVS",
+                url="https://t.me/insane_bots",
             ),
         ],
         [
